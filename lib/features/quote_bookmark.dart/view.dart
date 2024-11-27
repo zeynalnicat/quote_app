@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quote_app/common/constants/strings.dart';
-import 'package:quote_app/data/database/quote_dao.dart';
-import 'package:quote_app/domain/models/Quote.dart';
+import 'package:quote_app/data/network/local/quote_dao.dart';
+import 'package:quote_app/domain/entities/Quote.dart';
 
 class BookmarkScreen extends StatefulWidget {
   const BookmarkScreen({super.key});

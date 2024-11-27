@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:quote_app/data/network/api_service.dart';
-import 'package:quote_app/features/home/domain/response_model.dart';
+import 'package:quote_app/data/network/remote/api_service.dart';
+import 'package:quote_app/domain/models/home/response_model.dart';
 
 class QuoteRepository {
   final String? apiKey = dotenv.env['API_KEY'];

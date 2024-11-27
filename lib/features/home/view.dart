@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quote_app/features/quote_bookmark.dart/presentation/bookmark_screen.dart';
-import 'package:quote_app/widgets/view_quote_handler.dart';
+import 'package:quote_app/features/quote_bookmark.dart/view.dart';
+import 'package:quote_app/features/quote_bookmark.dart/components/view_quote_handler.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});

@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:quote_app/data/constants/network.dart';
-import 'package:quote_app/features/home/domain/quote_model.dart';
+import 'package:quote_app/domain/models/home/quote_model.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'api_service.g.dart';

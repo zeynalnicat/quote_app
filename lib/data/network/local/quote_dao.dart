@@ -1,5 +1,5 @@
-import 'package:quote_app/data/database/quote_db.dart';
-import 'package:quote_app/domain/models/Quote.dart';
+import 'package:quote_app/data/network/local/quote_db.dart';
+import 'package:quote_app/domain/entities/Quote.dart';
 
 class QuoteDao {
   Future<void> addQuote(String quote, String author, String category) async {

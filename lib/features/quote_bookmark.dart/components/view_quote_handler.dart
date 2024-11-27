@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quote_app/blocs/quote_bloc.dart';
 import 'package:quote_app/blocs/quote_state.dart';
-import 'package:quote_app/data/database/quote_dao.dart';
-import 'package:quote_app/widgets/quote_container.dart';
+import 'package:quote_app/data/network/local/quote_dao.dart';
+import 'package:quote_app/features/quote_bookmark.dart/components/quote_container.dart';
 
 class ViewQuoteHandler extends StatefulWidget {
   const ViewQuoteHandler({super.key});

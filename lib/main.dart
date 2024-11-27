@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quote_app/blocs/quote_bloc.dart';
-import 'package:quote_app/features/home/presentation/home_screen.dart';
+import 'package:quote_app/features/home/view.dart';
 
 void main() {
   runApp(const MyApp());
