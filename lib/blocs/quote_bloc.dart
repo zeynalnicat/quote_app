@@ -1,13 +1,11 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:quote_app/blocs/quote_state.dart';
-import 'package:quote_app/data/constants/network.dart';
 import 'package:quote_app/features/home/data/quote_repository.dart';
 
 class QuoteBloc extends Cubit<QuoteState> {
   QuoteBloc() : super(QuoteInitial());
 
-  QuoteRepository repo = QuoteRepository(NetworkConstants.apiKey);
+  QuoteRepository repo = QuoteRepository();
 
   Future<void> fetch() async {
     emit(QuoteLoading());

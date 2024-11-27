@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:quote_app/common/constants/strings.dart';
 import 'package:quote_app/data/database/quote_dao.dart';
-import 'package:quote_app/domain/Quote.dart';
+import 'package:quote_app/domain/models/Quote.dart';
 
 class BookmarkScreen extends StatefulWidget {
   const BookmarkScreen({super.key});
@@ -26,7 +27,7 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Favourites"),
+        title: const Text(AppStrings.tFavorite),
       ),
       body: FutureBuilder<List<QuoteEntity>>(
         future: _fetchBookmarks(),
@@ -35,9 +36,14 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
-            return Center(child: Text('Error: ${snapshot.error}'));
+            return Center(
+                child: Text('${AppStrings.tError}: ${snapshot.error}'));
           } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-            return const Center(child: Text("No bookmarks found"));
+            return const Center(child: Text(AppStrings.tNoBookMarks));
+          } else if (snapshot.connectionState == ConnectionState.none) {
+            return const Center(
+              child: Text(AppStrings.tUnstableInternet),
+            );
           } else {
             final bookmarks = snapshot.data!;
             return Expanded(
@@ -66,8 +72,8 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
                             children: [
                               Row(
                                 children: [
-                                  const Text("Category:",
-                                      style: const TextStyle(
+                                  const Text(AppStrings.tCategory,
+                                      style: TextStyle(
                                           fontFamily: "IBM",
                                           fontSize: 12,
                                           fontStyle: FontStyle.italic)),
